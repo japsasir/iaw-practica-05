@@ -14,7 +14,7 @@ set -x
 apt update
 
 # Instalamos apache
-apt install apache2-y 
+apt install apache2 -y 
 
 # Habilitamos los módulos de apache para configurarlo como proxy
 a2enmod proxy

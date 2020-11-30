@@ -14,4 +14,8 @@ Ciclo: CFGS Administración de Sistemas Informáticos en Red
 4. README.md—Enlace para repositorio.
 
 **Pasos seguidos**
-Montamos dos máquinas front end, que apuntarán a la ip privada de la máquina back-end. Despues, montamos una cuarta máquina que actuará de balanceador de carga. En ella, deberemos especificar las Ip privada en el script load_balancer.sh 
+Seguir el orden para evitar confusiones.
+
+- Desplegamos la máquina back_end.
+- Montamos dos máquinas front end, que apuntarán a la ip privada de la máquina back-end. Hay que modificar `/var/www/html/index.php` para indicar en que frontal estamos, guardar la edición y reiniciar apache2. En mi práctica, he elegido usar  `<p class="lead">Front_end_1</p>` como prueba.
+- Despues, montamos una cuarta máquina que actuará de balanceador de carga. En ella, deberemos especificar las IP privadas de nuestras dos máquinas front_end en nuestro archivo `000-default.conf` antes de lanzar el script.
