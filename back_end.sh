@@ -1,6 +1,7 @@
 #!/bin/bash
-
-# BACK_END
+###-------------------------------###
+### Script para máquina back_end  ###
+###-------------------------------###
 # Configuración del scritp
 # Definimos la contraseña de root como variable
 DB_ROOT_PASSWD=root

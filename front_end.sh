@@ -1,7 +1,7 @@
 #!/bin/bash
-###
-###Script para máquina### FRONT_END
-###
+###---------------------------------- ###
+### Script para máquina front_end     ###
+###---------------------------------- ###
 # Ruta donde guardamos el archivo .htpasswd, variables.
 HTTPASSWD_DIR=/home/ubuntu
 HTTPASSWD_USER=usuario
