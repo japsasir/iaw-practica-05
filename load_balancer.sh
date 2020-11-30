@@ -5,10 +5,10 @@
 # Configuramos el script para que muestre los comandos por consola
 set -x
 # ------------------------------------------------------------------------------ Variables de configuración ------------------------------------------------------------------------------ 
-
-IP_PRIVADA_FRONT_1=
-IP_PRIVADA_FRONT_2=
-#-----------------------------------------------------
+###! Aunque no son necesarias las variables en este script, recordatorio para modificar 000-default.conf antes de lanzar el script.
+# IP_PRIVADA_FRONT_1
+# IP_PRIVADA_FRONT_2
+# ------------------------------------------------------------------------------ Instalación balanceador de carga ------------------------------------------------------------------------------ 
 
 # Actualizamos los repositorios
 apt update
@@ -27,3 +27,10 @@ a2enmod proxy_balancer
 a2enmod proxy_connect
 a2enmod proxy_html
 a2enmod lbmethod_byrequests
+
+# Aplicamos nuestro archivo default.conf con las funciones de proxy inverso activadas.
+cp 000-default.conf /etc/apache2/sites-enabled/
+
+# Reiniciamos apache para que se apliquen los cambios
+sudo systemctl restart apache2
+
