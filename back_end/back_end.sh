@@ -12,7 +12,7 @@ DB_USU_PASSWD=usuario
 set -x
 # Actualizamos y actualizamos la lista de paquetes
 apt update  
-apt upgrade -y
+## apt upgrade -y
 # Instalamos el sistema gestor de base de datos
 apt install mysql-server -y
 
