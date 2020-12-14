@@ -16,7 +16,7 @@ BLOWFISH=`tr -dc A-Za-z0-9 < /dev/urandom | head -c 64`
 set -x
 # Actualizamos la lista de paquetes
 apt update
-apt upgrade -y
+## apt upgrade -y
 # Instalamos el servidor web Apache
 apt install apache2 -y
 # Instalamos los módulos necesarios de PHP
